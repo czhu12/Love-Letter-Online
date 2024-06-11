@@ -1,12 +1,11 @@
-<div class="container mx-auto flex flex-col">
-  <div>Show players</div>
+<div class="container mt-14 mx-auto flex flex-col">
   <div class="flex flex-row space-x-4">
     <% GamesController::PROFILE_PICTURES[0..3].each do |profile_picture| %>
       <%= render "love_letter/player", player: Player.new(nil, "name", metadata: {profile_picture: profile_picture}) %>
     <% end %>
   </div>
-  <div class="mb-2">Show deck</div>
-  <div class="mb-2">Your hand</div>
+  <div class="my-4">Deck</div>
+  <div class="my-4">Your hand</div>
   <div class="flex flex-row space-x-8">
     <% @cards.each do |card| %>
       <%= render "love_letter/card", card: %>
