@@ -1,10 +1,10 @@
-<div class="card rounded-xl shadow-lg bordered max-w-[300px] bg-neutral text-white relative">
-  <div class="absolute top-0 left-0 mr-8 text-4xl bg-primary p-7 py-5 rounded-tl-xl rounded-br-xl"><%= card.value %></div>
-  <img class="rounded-t-xl" src="/images/love_letter/cards/<%= card.class.name.demodulize.downcase %>.webp" />
-  <div class="p-8">
-    <div class="mb-3">
-      <div class="text-2xl"><%= card.class.name.demodulize %></div>
-    </div>
+<div class="group cursor-pointer h-full card rounded-xl shadow-lg bordered max-w-[300px] bg-neutral text-white mb-5">
+  <div class="relative opacity-80 transition duration-300 ease-in-out group-hover:opacity-100 overflow-hidden rounded-t-xl">
+    <div class="z-10 absolute top-0 left-0 mr-8 text-4xl bg-primary p-7 py-5 rounded-tl-xl rounded-br-xl"><%= card.value %></div>
+    <img class="rounded-t-xl animate-fade-in block h-full w-full scale-100 transform opacity-100 transition duration-300 group-hover:scale-110" src="/images/love_letter/cards/<%= card.class.name.demodulize.downcase %>.webp" />
+  </div>
+  <div class="p-8 transition duration-300 ease-in-out group-hover:scale-105">
+    <div class="text-2xl mb-3"><%= card.class.name.demodulize %></div>
     <div class="text-xs"><%= card.text %></div>
   </div>
 </div>

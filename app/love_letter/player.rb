@@ -2,7 +2,7 @@ class Player
   attr_accessor :id, :name, :metadata
 
   def initialize(id, name, metadata: {
-      hand: []
+      hand: [],
       protected: false
   })
     @id = id

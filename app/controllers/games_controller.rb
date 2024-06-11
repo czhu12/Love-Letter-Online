@@ -15,7 +15,7 @@ class GamesController < ApplicationController
     end
     @cards = [
       Cards::Baron.new(nil, nil),
-      Cards::Guard.new(nil, nil),
+      Cards::Princess.new(nil, nil),
     ] # Two Cards
   end
 end
