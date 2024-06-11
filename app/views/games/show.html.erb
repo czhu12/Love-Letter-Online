@@ -1,0 +1,9 @@
+<div>
+  <% if @game.lobby? %>
+    <%= render "games/lobby", game: @game %>
+  <% elsif @game.playing? %>
+    <%= render "games/playing", game: @game %>
+  <% elsif @game.completed? %>
+    <%= render "games/completed", game: @game %>
+  <% end %>
+</div>

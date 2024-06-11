@@ -1,0 +1,17 @@
+<h1>Lobby</h1>
+<div class="flex flex-row">
+<% GamesController::PROFILE_PICTURES.each do |profile_url| %>
+  <a class="cursor-pointer">
+    <img class="rounded mr-4 w-[100px]" src=<%= "/images/love_letter/characters/#{profile_url}" %> />
+  </a>
+<% end %>
+</div>
+<div id="name-form">
+  <input id="name-input" type="text" placeholder="Enter your name" />
+  <button id="enter-lobby">Enter Lobby</button>
+</div>
+<div id="lobby" style="display: none;">
+  <input type="hidden" id="game-code" value="<%= @game.code %>" />
+  <h2>Users in the lobby:</h2>
+  <div id="user-list"></div>
+</div>

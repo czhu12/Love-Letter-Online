@@ -1,0 +1,10 @@
+<div class="card rounded-xl shadow-lg bordered max-w-[300px] bg-neutral text-white relative">
+  <div class="absolute top-0 left-0 mr-8 text-4xl bg-primary p-7 py-5 rounded-tl-xl rounded-br-xl"><%= card.value %></div>
+  <img class="rounded-t-xl" src="/images/love_letter/cards/<%= card.class.name.demodulize.downcase %>.webp" />
+  <div class="p-8">
+    <div class="mb-3">
+      <div class="text-2xl"><%= card.class.name.demodulize %></div>
+    </div>
+    <div class="text-xs"><%= card.text %></div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="mt-28 mb-14 text-center">
+  <h1 class="text-6xl text-primary">Love Letter</h1>
+</div>
+<div class="container flex flex-col items-center mx-auto px-5">
+  <h2 class="font-bold mb-2 text-2xl">JOIN A GAME</h2>
+  <%= form_with(url: play_path, method: :get, html: { class: "space-y-3" }) do |form| %>
+    <div>
+      <%= form.label :code, "Lobby Code" %>
+      <%= form.text_field :code, autocomplete: "off", class: "form-control" %>
+    </div>
+
+    <div>
+      <%= form.label :name, "Your Name" %>
+      <%= form.text_field :name, autocomplete: "off", class: "form-control" %>
+    </div>
+    <%= form.submit "JOIN", class: "btn text-white btn-primary", name: nil %>
+  <% end %>
+
+  <h2 class="mt-10 mb-2 font-bold text-2xl">CREATE A LOBBY</h2>
+  <%= form_with(model: Game.new, html: { class: "space-y-3" }) do |form| %>
+    <div>
+      <%= form.label :name, "Your Name", class: "form-control" %>
+      <%= form.text_field :name, autocomplete: "off" %>
+    </div>
+    <%= form.button "JOIN", type: "submit", class: "btn text-white btn-primary", name: nil %>
+  <% end %>
+</div>
