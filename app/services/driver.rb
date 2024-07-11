@@ -1,6 +1,5 @@
 class Driver
   def initialize(steps, game, user)
-    state.
   end
 
   def puts
